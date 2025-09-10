@@ -1,0 +1,17 @@
+{
+    "javascript.suggest.enabled": true,
+    "typescript.suggest.enabled": true,
+    "editor.suggest.showClasses": true,
+    "editor.suggest.showColors": true,
+    "editor.suggest.showDeprecated": true,
+    "editor.suggest.showFiles": true,
+    "editor.suggest.showFunctions": true,
+    "editor.suggest.showInterfaces": true,
+    "editor.suggest.showIssues": true,
+    "editor.suggest.showKeywords": true,
+    "editor.suggest.showMethods": true,
+    "editor.suggest.showModules": true,
+    "editor.suggest.showReferences": true,
+    "editor.suggest.showSnippets": true,
+    "editor.suggest.showUsers": true,
+}

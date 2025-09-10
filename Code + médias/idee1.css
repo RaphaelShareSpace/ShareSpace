@@ -1,0 +1,101 @@
+body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .accordion {
+      background-color: #fff;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+      transition: 0.4s;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .active, .accordion:hover {
+      background-color: #b4c5d4;
+    }
+
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      display: none;
+      overflow: hidden;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .panel .media {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+    .panel .media label {
+      margin-right: 4px;
+    }
+    .panel .media img {
+      max-width: 120px;
+      height: auto;
+      display: block;
+    }
+
+    .related-terms {
+      margin-top: 10px;
+    }
+
+    .related-term {
+      margin-right: 8px;
+      padding: 6px 12px;
+      border-radius: 4px;
+      border: 1px solid #bbb;
+      background: #f0f8ff;
+      cursor: pointer;
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+
+    .related-active .related-term {
+      opacity: 1;
+    }
+
+    .related-inactive .related-term {
+      opacity: 1;
+    }
+
+    .header-banner {
+      width: 100%;
+      color: black;
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+      padding: 16px 0;
+      margin-bottom: 54px;
+      border-radius: 8px;
+    }
+    .footer-banner {
+      width: 100%;
+      color: black;
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+      padding: 16px 0;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+
+    img{
+      border-radius: 8px;
+      align-items: right;
+      width: 150px;
+    }
