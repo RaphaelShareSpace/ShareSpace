@@ -1,0 +1,6 @@
+.alphabet-nav {
+    display: flex;
+    font-size: 20px;
+    align-self: center;
+    justify-content: center;
+}
