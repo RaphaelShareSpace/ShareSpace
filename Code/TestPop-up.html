@@ -37,29 +37,66 @@
 </head>
 <body>
 
-  <button id="btnPopup">popup</button>
+  <button class="elementor-button-text">Cybersickness</button>
+  <button class="elementor-button-text">Embodiment</button>
+  <button class="elementor-button-text">Avatar (L1)</button>
+  <button class="elementor-button-text">Ego-Centric Visual Inertial Tracking</button>
+
+
   <div id="maPopup" class="popup" style="display: none;">
     <div class="popup-contenu">
       <span class="fermer" onclick="fermerPopup()">&times;</span>
-      <h2>Bienvenue sur ma page !</h2>
-      <p>Ceci est une popup.</p>
+      <div id="defContent"></div>
     </div>
   </div>
 
+  <div class="def" style="display: none">
+    <h2>Cybersickness</h2>
+    <p>je suis <a href="https://youtube.com">Cybersickness</a></p>
+  </div>
+
+  <div class="def" style="display: none">
+    <h2>Embodiment</h2>
+    <p>JE suis l'embodiment</p>
+  </div>
+
+  <div class="def" style="display: none">
+    <h2>Avatar (L1)</h2>
+    <p>Je suis avatar (L1)</p>
+  </div>
+
+  <div class="def" style="display: none">
+    <h2>Ego-Centric VisualInertial Tracking</h2>
+    <p>Je suis ego centric blabla</p>
+  </div>
 
 
 <script>
-  // Ouvrir la popup automatiquement après 2 secondes
-  document.querySelector('#btnPopup').addEventListener('click', function () {
-    setTimeout(function () {
-      document.getElementById('maPopup').style.display = 'flex';
-    }, 2000);
+  const popup = document.querySelector('.popup');
+  const popupContent = document.getElementById('defContent');
+  const defs = document.querySelectorAll('.def');
+
+  document.querySelectorAll('.elementor-button-text').forEach(terme => {
+    terme.addEventListener('click', function(){
+      const termeTexte = this.textContent.trim();
+      let contenu = '';
+      defs.forEach(def => {
+        const titre = def.querySelector('h2');
+        if (titre && titre.textContent.trim() === termeTexte) {
+          contenu = def.innerHTML;
+        }
+      });
+      popupContent.innerHTML = contenu;
+      popup.style.display = 'flex';
+    });
   });
 
-  // Fonction pour fermer la popup
   function fermerPopup() {
-    document.getElementById('maPopup').style.display = 'none';
+    popup.style.display = 'none';
   }
+  popup.addEventListener('click', e => {
+    if(e.target === popup) fermerPopup();
+  }); 
 </script>
 
 </body>
