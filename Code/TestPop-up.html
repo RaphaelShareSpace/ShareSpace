@@ -33,6 +33,14 @@
   font-size: 24px;
   cursor: pointer;
 }
+
+.popup-contenu img {
+  max-width: 90%;
+  height: auto;
+  max-height: 300px;
+  display: block;
+  margin: 20px auto 0 auto;
+}
 </style>
 </head>
 <body>
@@ -40,7 +48,7 @@
   <button class="elementor-button-text">Cybersickness</button>
   <button class="elementor-button-text">Embodiment</button>
   <button class="elementor-button-text">Avatar (L1)</button>
-  <button class="elementor-button-text">Ego-Centric Visual Inertial Tracking</button>
+  <button class="elementor-button-text">Ego-Centric Visual-Inertial Tracking</button>
 
 
   <div id="maPopup" class="popup" style="display: none;">
@@ -52,21 +60,26 @@
 
   <div class="def" style="display: none">
     <h2>Cybersickness</h2>
-    <p>je suis <a href="https://youtube.com">Cybersickness</a></p>
+    <p>je suis Cybersickness, mon lien est 
+      <a href="#" class="popup-link" data-terme="Avatar (L1)">Avatar (L1)</a>
+    </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Embodiment</h2>
     <p>JE suis l'embodiment</p>
+    <img src="../Médias/SHARESPACE_logo_gradient_final.png" alt="SHARESPACE logo">
   </div>
 
   <div class="def" style="display: none">
     <h2>Avatar (L1)</h2>
-    <p>Je suis avatar (L1)</p>
+    <p>Je suis avatar (L1), mon lien est 
+      <a href="#" class="popup-link" data-terme="Embodiment">Embodiment</a>
+    </p>
   </div>
 
   <div class="def" style="display: none">
-    <h2>Ego-Centric VisualInertial Tracking</h2>
+    <h2>Ego-Centric Visual-Inertial Tracking</h2>
     <p>Je suis ego centric blabla</p>
   </div>
 
@@ -76,20 +89,35 @@
   const popupContent = document.getElementById('defContent');
   const defs = document.querySelectorAll('.def');
 
+
   document.querySelectorAll('.elementor-button-text').forEach(terme => {
     terme.addEventListener('click', function(){
       const termeTexte = this.textContent.trim();
-      let contenu = '';
-      defs.forEach(def => {
-        const titre = def.querySelector('h2');
-        if (titre && titre.textContent.trim() === termeTexte) {
-          contenu = def.innerHTML;
-        }
-      });
-      popupContent.innerHTML = contenu;
-      popup.style.display = 'flex';
+      afficherDefinition(termeTexte);
     });
   });
+
+
+  function afficherDefinition(termeTexte) {
+    let contenu = '';
+    defs.forEach(def => {
+      const titre = def.querySelector('h2');
+      if (titre && titre.textContent.trim() === termeTexte) {
+        contenu = def.innerHTML;
+      }
+    });
+    popupContent.innerHTML = contenu;
+    popup.style.display = 'flex';
+
+
+    popupContent.querySelectorAll('.popup-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const terme = this.getAttribute('data-terme');
+        afficherDefinition(terme);
+      });
+    });
+  }
 
   function fermerPopup() {
     popup.style.display = 'none';
