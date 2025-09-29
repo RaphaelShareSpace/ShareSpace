@@ -1,0 +1,114 @@
+code scrollbar pour rester au meme niveau lors du clique :
+<script>
+  const popup = document.querySelector('.popup');
+  const popupContent = document.getElementById('defContent');
+  const defs = document.querySelectorAll('.def');
+
+  let scrollPosition = 0; // Pour mémoriser la position du scroll
+
+  document.querySelectorAll('.elementor-button-text').forEach(terme => {
+    terme.addEventListener('click', function(){
+      const termeTexte = this.textContent.trim();
+      afficherDefinition(termeTexte);
+    });
+  });
+
+  function afficherDefinition(termeTexte) {
+    let contenu = '';
+    defs.forEach(def => {
+      const titre = def.querySelector('h2');
+      if (titre && titre.textContent.trim() === termeTexte) {
+        contenu = def.innerHTML;
+      }
+    });
+
+    // Sauvegarder la position de scroll
+    scrollPosition = window.scrollY || window.pageYOffset;
+    
+    // Bloquer le scroll en conservant la position
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
+
+    popupContent.innerHTML = contenu;
+    popup.style.display = 'flex';
+
+    // Gérer les liens internes dans les définitions
+    popupContent.querySelectorAll('.popup-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const terme = this.getAttribute('data-terme');
+        afficherDefinition(terme);
+      });
+    });
+  }
+
+  function fermerPopup() {
+    // Fermer la popup
+    popup.style.display = 'none';
+
+    // Débloquer le scroll et restaurer la position
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
+    
+    // Revenir à la position d'origine
+    window.scrollTo(0, scrollPosition);
+  }
+
+  // Fermer si on clique à l'extérieur du contenu
+  popup.addEventListener('click', e => {
+    if(e.target === popup) fermerPopup();
+  }); 
+</script>
+
+
+
+code normal qui ramene la scrollbar tt en haut : 
+
+<script>
+  const popup = document.querySelector('.popup');
+  const popupContent = document.getElementById('defContent');
+  const defs = document.querySelectorAll('.def');
+
+
+  document.querySelectorAll('.elementor-button-text').forEach(terme => {
+    terme.addEventListener('click', function(){
+      const termeTexte = this.textContent.trim();
+      afficherDefinition(termeTexte);
+    });
+  });
+
+
+  function afficherDefinition(termeTexte) {
+    let contenu = '';
+    defs.forEach(def => {
+      const titre = def.querySelector('h2');
+      if (titre && titre.textContent.trim() === termeTexte) {
+        contenu = def.innerHTML;
+      }
+    });
+    popupContent.innerHTML = contenu;
+    popup.style.display = 'flex';
+
+
+    popupContent.querySelectorAll('.popup-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const terme = this.getAttribute('data-terme');
+        afficherDefinition(terme);
+      });
+    });
+  }
+
+  function fermerPopup() {
+    popup.style.display = 'none';
+  }
+  popup.addEventListener('click', e => {
+    if(e.target === popup) fermerPopup();
+  }); 
+</script>
