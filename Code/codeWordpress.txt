@@ -28,6 +28,11 @@
   font-size: 24px;
   cursor: pointer;
 }
+
+.popup-link[data-terme] {
+  color: #e75480;
+  text-decoration: underline;
+}
 </style>
 
   <div id="maPopup" class="popup" style="display: none;">
@@ -39,151 +44,151 @@
 
   <div class="def" style="display: none">
     <h2>Extended Reality (XR)</h2>
-    <p>The umbrella term used for Virtual Reality (VR), Augmented Reality (AR), and Mixed Reality (MR), as well as future realities immersive technologies might create. XR continuum covers the full spectrum of real and virtual environments. The design and implementation of such environments faces many challenges that Sharespace studies and takes up, for instance allowing for Hybrid Co-location of users from different physical spaces, optimizing the accuracy of their Movement Representation and thereby guaranteeing a certain Authenticity of XR Experience, or providing users with means of Action–Perception Coupling, Sensorimotor Propagation and Hybrid Synchronization, which fosters a sense of Cooperation, Social Presence and Sociality more generally.
+    <p>The umbrella term used for Virtual Reality (VR), Augmented Reality (AR), and Mixed Reality (MR), as well as future realities immersive technologies might create. XR continuum covers the full spectrum of real and virtual environments. The design and implementation of such environments faces many challenges that Sharespace studies and takes up, for instance allowing for Hybrid Co-location of users from different physical spaces, optimizing the accuracy of their <a href="#" class="popup-link" data-terme="Movement Representation">Movement Representation</a> and thereby guaranteeing a certain <a href="#" class="popup-link" data-terme="Authenticity of XR Experience">Authenticity of XR Experience</a>, or providing users with means of <a href="#" class="popup-link" data-terme="Action-Perception Coupling">Action-Perception Coupling</a>, <a href="#" class="popup-link" data-terme="Sensorimotor Propagation">Sensimotor Propagation</a> and <a href="#" class="popup-link" data-terme="Hybrid Synchronisation">Hybrid Synchronization</a>, which fosters a sense of <a href="#" class="popup-link" data-terme="Cooperation (L2/L3)">Cooperation</a>, Social Presence and <a href="#" class="popup-link" data-terme="Sociality (L1)">Sociality</a> more generally.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Avatar (L1)</h2>
-    <p>An avatar is a three-dimensional digital character that represents a physical person within social XR environments. While not always an exact replica, an avatar typically resembles the person’s appearance (morphological similarity) and movements (kinematic similarity through accurate movement representations). The Avatar serves as a digital proxy of the individual, and, through the Social Information it provides to others in shared hybrid spaces, it also constitutes a vehicle of Sociality. 
+    <p>An avatar is a three-dimensional digital character that represents a physical person within social <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a> environments. While not always an exact replica, an avatar typically resembles the person’s appearance (morphological similarity) and movements (kinematic similarity through accurate movement representations). The Avatar serves as a digital proxy of the individual, and, through the <a href="#" class="popup-link" data-terme="Social Information">Social Information</a> it provides to others in shared hybrid spaces, it also constitutes a vehicle of <a href="#" class="popup-link" data-terme="Sociality (L1)">Sociality</a>. 
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Semi-Autonomous Virtual Character (L2)</h2>
-    <p>A semi-autonomous virtual character occupies a hybrid position between an avatar (L1) and an autonomous virtual character (L3). Its behaviour is partially controlled by a real person, while other actions are generated algorithmically, for instance by the cognitive architectures designed in Sharespace.
+    <p>A semi-autonomous virtual character occupies a hybrid position between an <a href="#" class="popup-link" data-terme="Avatar (L1)">avatar (L1)</a> and an <a href="#" class="popup-link" data-terme="Autonomous Virtual Character (L3)">autonomous virtual character (L3)</a>. Its behaviour is partially controlled by a real person, while other actions are generated algorithmically, for instance by the cognitive architectures designed in Sharespace.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Autonomous Virtual Character (L3)</h2>
-    <p>An autonomous virtual character is an Embodied autonomous agent, that is, an agent that interacts with others in a social XR environment through a virtual body, and that yet retains its own way of operating and behaving in the process. In other words, it perceives, acts upon, and adapts to the environment over time following a pre-defined set of rules implemented with reinforcement learning processes.
+    <p>An autonomous virtual character is an <a href="#" class="popup-link" data-terme="Embodiment/Embodied">Embodied</a> autonomous agent, that is, an agent that interacts with others in a social <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a> environment through a virtual body, and that yet retains its own way of operating and behaving in the process. In other words, it perceives, acts upon, and adapts to the environment over time following a pre-defined set of rules implemented with reinforcement learning processes.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Autonomization Continuum</h2>
-    <p>Digital agents can be categorized according to incremental levels of autonomization (autonomy in artificial agents): avatars (L1) are fully driven by humans, typically implemented through the optimization of movement representations in real time; Semi-autonomous virtual characters (L2) are partially human-controlled, and partially governed by a modulation of human users information, for instance through movement amplification/attenuation of sensorimotor primitives; Autonomous virtual characters (L3) are fully independent, powered by AI cognitive architectures, and capable of real-time adjustments of their behaviour.
+    <p>Digital agents can be categorized according to incremental levels of autonomization (autonomy in artificial agents): <a href="#" class="popup-link" data-terme="Avatar (L1)">avatar (L1)</a> are fully driven by humans, typically implemented through the optimization of <a href="#" class="popup-link" data-terme="Movement Representation">movement representation</a> in real time; <a href="#" class="popup-link" data-terme="Semi-Autonomous Virtual Character (L2)">Semi-autonomous virtual characters (L2)</a> are partially human-controlled, and partially governed by a modulation of human users information, for instance through movement <a href="#" class="popup-link" data-terme="Amplification/Attenuation of Sensorimotor Primitives">amplification/attenuation of sensorimotor primitives</a>; <a href="#" class="popup-link" data-terme="Autonomous Virtual Character (L3)">Autonomous virtual character (L3)</a> are fully independent, powered by AI <a href="#" class="popup-link" data-terme="Cognitive Architecture">cognitive architectures</a>, and capable of real-time adjustments of their behaviour.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Remote Social Connectedness</h2>
-    <p>It refers to the sense of belonging and closeness people experience when interacting with others in XR, . It is reinforced by strong Action-Perception Coupling, making Hybrid Synchronization a key process. In return, it fosters cooperation, motivation, emotional support, and adherence by strengthening bonds between individuals, or between individuals and digital agents: Avatars (L1), Semi-Autonomous Virtual Character (L2) and Autonomous Virtual Character (L3).
+    <p>It refers to the sense of belonging and closeness people experience when interacting with others in <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a>, . It is reinforced by strong <a href="#" class="popup-link" data-terme="Action-Perception Coupling">Action-Perception Coupling</a>, making <a href="#" class="popup-link" data-terme="Hybrid Synchronisation">Hybrid Synchronisation</a> a key process. In return, it fosters <a href="#" class="popup-link" data-terme="Cooperation (L2/L3)">cooperation</a>, motivation, emotional support, and adherence by strengthening bonds between individuals, or between individuals and digital agents: <a href="#" class="popup-link" data-terme="Avatar (L1)">Avatars (L1)</a>, <a href="#" class="popup-link" data-terme="Semi-Autonomous Virtual Character (L2)">Semi-Autonomous Virtual Character (L2)</a> and <a href="#" class="popup-link" data-terme="Autonomous Virtual Character (L3)">Autonomous Virtual Character (L3)</a>.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Hybrid Synchronisation</h2>
-    <p>A phenomenon whereby the movements of individuals and/or virtual agents (Avatars (L1), Semi-Autonomous Virtual Character (L2) and Autonomous Virtual Character (L3)) are temporally aligned, thanks to their Action-Perception Coupling and mechanisms of Sensorimotor Propagation. Hybrid Synchronisation can be defined by phase-locking (i.e., the matching of time signals), allowing for minor differences or consistent time lags. Synchronisation being considered as a marker of social connectedness in human-human interactions, Sharespace explores the potential of Hybrid Synchronisation to foster Remote Social Connectedness.
+    <p>A phenomenon whereby the movements of individuals and/or virtual agents (<a href="#" class="popup-link" data-terme="Avatar (L1)">Avatars (L1)</a>, <a href="#" class="popup-link" data-terme="Semi-Autonomous Virtual Character (L2)">Semi-Autonomous Virtual Character (L2)</a> and <a href="#" class="popup-link" data-terme="Autonomous Virtual Character (L3)">Autonomous Virtual Character (L3)</a>) are temporally aligned, thanks to their <a href="#" class="popup-link" data-terme="Action-Perception Coupling">Action-Perception Coupling</a> and mechanisms of <a href="#" class="popup-link" data-terme="Sensorimotor Propagation">Sensorimotor Propagation</a>. Hybrid Synchronisation can be defined by phase-locking (i.e., the matching of time signals), allowing for minor differences or consistent time lags. Synchronisation being considered as a marker of social connectedness in human-human interactions, Sharespace explores the potential of Hybrid Synchronisation to foster <a href="#" class="popup-link" data-terme="Remote Social Connectedness">Remote Social Connectedness</a>.
     </p>
   </div>
 
   <div class="def" style="display: none">
-    <h2>Sensimotor Primitives</h2>
-    <p>The foundational components of intentional bodily actions. These include coordinated patterns of kinematic, dynamic, and sensory variables. Sensorimotor primitives encode movement-based Social Information such as intentionality and emotion. A technical challenge that Sharespace promises to take up is to compute and render accurate Movement Representations of these primitives.
+    <h2>Sensorimotor Primitives</h2>
+    <p>The foundational components of intentional bodily actions. These include coordinated patterns of kinematic, dynamic, and sensory variables. Sensorimotor primitives encode movement-based <a href="#" class="popup-link" data-terme="Social Information">Social Information</a> such as intentionality and emotion. A technical challenge that Sharespace promises to take up is to compute and render accurate <a href="#" class="popup-link" data-terme="Movement Representation">Movement Representations</a> of these primitives.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Social Information</h2>
-    <p>Information embedded in Sensorimotor Primitives —including intentions, emotions, and subjective feelings— that enable individuals to infer others’ states and roles, fostering behavioral alignment, shared understanding, and collective action, without explicit verbal communication, but rather through Sensorimotor Propagation.
+    <p>Information embedded in <a href="#" class="popup-link" data-terme="Sensorimotor Primitives">Sensorimotor Primitives</a> —including intentions, emotions, and subjective feelings— that enable individuals to infer others’ states and roles, fostering behavioral alignment, shared understanding, and collective action, without explicit verbal communication, but rather through <a href="#" class="popup-link" data-terme="Sensorimotor Propagation">Sensorimotor Propagation</a>.
     </p>
   </div>
 
   <div class="def" style="display: none">
-    <h2>Sensimotor Propagation</h2>
-    <p>The transmission and entrainment of Social Information, encoded in Sensorimotor Primitives, across Avatars (L1), Semi-Autonomous Virtual Character (L2) and/or Autonomous Virtual Character (L3).. The extent of propagation is rooted into the amount of Social Information encoded and transmitted. In XR, sensorimotor propagation through action-perception coupling is also fundamental to Hybrid Synchronisation.
+    <h2>Sensorimotor Propagation</h2>
+    <p>The transmission and entrainment of <a href="#" class="popup-link" data-terme="Social Information">Social Information</a>, encoded in <a href="#" class="popup-link" data-terme="Sensorimotor Primitives">Sensorimotor Primitives</a>, across <a href="#" class="popup-link" data-terme="Avatar (L1)">Avatars (L1)</a>, <a href="#" class="popup-link" data-terme="Semi-Autonomous Virtual Character (L2)">Semi-Autonomous Virtual Character (L2)</a> and/or <a href="#" class="popup-link" data-terme="Autonomous Virtual Character (L3)">Autonomous Virtual Character (L3)</a>.. The extent of propagation is rooted into the amount of <a href="#" class="popup-link" data-terme="Social Information">Social Information</a> encoded and transmitted. In <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a>, sensorimotor propagation through <a href="#" class="popup-link" data-terme="Action-Perception Coupling">action-perception coupling</a> is also fundamental to <a href="#" class="popup-link" data-terme="Hybrid Synchronisation">Hybrid Synchronisation</a>.
     </p>
   </div>
 
   <div class="def" style="display: none">
-    <h2>Amplification/Attenuation of Sensimotor Primitives</h2>
-    <p>Amplification involves enhancing sensorimotor cues to facilitate the readout of Social Information by human interactants, for instance through a dedicated Cognitive Architecture. Attenuation reduces or filters such cues, decreasing the transmission of Social Information in XR. Amplification and Attenuation are key to Sensorimotor Propagation in XR.
+    <h2>Amplification/Attenuation of Sensorimotor Primitives</h2>
+    <p>Amplification involves enhancing sensorimotor cues to facilitate the readout of <a href="#" class="popup-link" data-terme="Social Information">Social Information</a> by human interactants, for instance through a dedicated <a href="#" class="popup-link" data-terme="Cognitive Architecture">Cognitive Architecture</a>. Attenuation reduces or filters such cues, decreasing the transmission of Social Information in <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a>. Amplification and Attenuation are key to <a href="#" class="popup-link" data-terme="Sensorimotor Propagation">Sensimotor Propagation</a> in XR.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Embodiment/Embodied</h2>
-    <p>A pre-reflective subjective experience combining self-location (i.e., feeling located where the avatar is), agency (feeling in control of the  avatar’s actions) and ownership (i.e., feeling that the avatar’s body is one’s own). Embodiment can nurture a sense of presence in XR environments, the subjective sense that the experiences in XR are authentic.
+    <p>A pre-reflective subjective experience combining self-location (i.e., feeling located where the avatar is), agency (feeling in control of the  avatar’s actions) and ownership (i.e., feeling that the avatar’s body is one’s own). Embodiment can nurture a sense of presence in <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a> environments, the subjective sense that the experiences in XR are authentic.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Social Presence</h2>
-    <p>The subjective sense of perceiving  virtual others [Avatars (L1), Semi-Autonomous Virtual Character (L2) and Autonomous Virtual Character (L3)] as intentional and being connected to one’s digital self across dimensions of body, emotion, and identity. It includes both the psychological and physical sense of “being there” in a shared hybrid space. Social presence is paramount in triggering the motivation to read Social Information out and to feel Remote Social Connectedness.
+    <p>The subjective sense of perceiving  virtual others [<a href="#" class="popup-link" data-terme="Avatar (L1)">Avatars (L1)</a>, <a href="#" class="popup-link" data-terme="Semi-Autonomous Virtual Character (L2)">Semi-Autonomous Virtual Character (L2)</a> and/or <a href="#" class="popup-link" data-terme="Autonomous Virtual Character (L3)">Autonomous Virtual Character (L3)</a>] as intentional and being connected to one’s digital self across dimensions of body, emotion, and identity. It includes both the psychological and physical sense of “being there” in a shared hybrid space. Social presence is paramount in triggering the motivation to read <a href="#" class="popup-link" data-terme="Social Information">Social Information</a> out and to feel <a href="#" class="popup-link" data-terme="Remote Social Connectedness">Remote Social Connectedness</a>.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Cybersickness</h2>
-    <p>A form of motion sickness experienced in XR, caused by lack of control, postural instability, sensory conflicts, and prolonged immersion. Typical symptoms include nausea, dizziness, disorientation, eye strain, and fatigue, which can disrupt presence and social interaction. In social XR, reducing cybersickness involves optimizing frame rate and latency, providing stable reference cues, supporting active control of movement, optimizing Movement Representations and Perception-Action Coupling, and enabling Embodied Hybrid  Synchronization.
+<p>A form of motion sickness experienced in <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a>, caused by lack of control, postural instability, sensory conflicts, and prolonged immersion. Typical symptoms include nausea, dizziness, disorientation, eye strain, and fatigue, which can disrupt presence and social interaction. In social XR, reducing cybersickness involves optimizing frame rate and latency, providing stable reference cues, supporting active control of movement, optimizing <a href="#" class="popup-link" data-terme="Movement Representation">Movement Representations</a> and <a href="#" class="popup-link" data-terme="Action-Perception Coupling">Perception-Action Coupling</a>, and enabling <a href="#" class="popup-link" data-terme="Embodiment/Embodied">Embodied</a> <a href="#" class="popup-link" data-terme="Hybrid Synchronisation">Hybrid Synchronization</a>.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Sociality (L1)</h2>
-    <p>The capacity or tendency of humans to live in social groups and engage in interactions with others, including forming relationships, communicating, and cooperating. Sociality represents the social, cultural, biological and personal bases to human coexistence as a social animal relevant to reproduction and survival. In Social XR, a digital replica — Avatar (L1) — acts as a proxy for the user and subsequently is an extended vehicle for Remote Social Connectedness.
+    <p>The capacity or tendency of humans to live in social groups and engage in interactions with others, including forming relationships, communicating, and cooperating. Sociality represents the social, cultural, biological and personal bases to human coexistence as a social animal relevant to reproduction and survival. In Social XR, a digital replica — <a href="#" class="popup-link" data-terme="Avatar (L1)">Avatar (L1)</a> — acts as a proxy for the user and subsequently is an extended vehicle for <a href="#" class="popup-link" data-terme="Remote Social Connectedness">Remote Social Connectedness</a>.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Dignity (L1)</h2>
-    <p>The inherent worth of individuals, protected by legal and ethical standards. Dignity is a foundation of human rights and guide moral decisions to guarantee respect and autonomy. In Social XR, digital replicas — Avatar (L1) — are extensions of the personhood(s) of the users and therefore are constrained and influenced by social norms and practices.
+    <p>The inherent worth of individuals, protected by legal and ethical standards. Dignity is a foundation of human rights and guide moral decisions to guarantee respect and autonomy. In Social XR, digital replicas — <a href="#" class="popup-link" data-terme="Avatar (L1)">Avatar (L1)</a>— are extensions of the personhood(s) of the users and therefore are constrained and influenced by social norms and practices.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Self-Identity (L2)</h2>
-    <p>The ontological state of self-awareness which differentiates one individual from another and marks out self-ownership. In Social XR, preserving and/or protecting self-identity is critical when users engage with Semi-Autonomous Virtual Characters (L2)  or when their identity is conveyed by Avatar (L1) by Embodiment/Embodied processes.
+    <p>The ontological state of self-awareness which differentiates one individual from another and marks out self-ownership. In Social XR, preserving and/or protecting self-identity is critical when users engage with <a href="#" class="popup-link" data-terme="Semi-Autonomous Virtual Character (L2)">Semi-Autonomous Virtual Characters (L2)</a>  or when their identity is conveyed by <a href="#" class="popup-link" data-terme="Avatar (L1)">Avatar (L1)</a> by <a href="#" class="popup-link" data-terme="Embodiment/Embodied">Embodiment/Embodied</a> processes.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Transparency (L2)</h2>
-    <p>Transparency refers to the understandability accountability of AI system and its development process. In transparency concern involves clear awareness of the Cognitive Architectures used for both human and autonomous agents —Semi-Autonomous Virtual Character (L2) and Autonomous Virtual Character (L3)— including how interactions are moderated, and how decisions are made.
+    <p>Transparency refers to the understandability accountability of AI system and its development process. In transparency concern involves clear awareness of the <a href="#" class="popup-link" data-terme="Cognitive Architecture">Cognitive Architectures</a> used for both human and autonomous agents —<a href="#" class="popup-link" data-terme="Semi-Autonomous Virtual Character (L2)">Semi-Autonomous Virtual Characters (L2)</a> and <a href="#" class="popup-link" data-terme="Autonomous Virtual Character (L3)">Autonomous Virtual Character (L3)</a>— including how interactions are moderated, and how decisions are made.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Responsability (L2/L3)</h2>
-    <p>The obligation to ensure that AI technologies are developed and used in ways that respect human rights, minimize harm, and promote fairness, transparency, and accountability. Offsetting future harms by conscious and ethical deliberation and implementing cautionary approaches such as “do not do significant harm”. In Social XR in which Semi-Autonomous Virtual Character (L2) and Autonomous Virtual Character (L3) are implemented, this can mean considering potential or undesirable outcomes arising from its expansion to broader applications.
+    <p>The obligation to ensure that AI technologies are developed and used in ways that respect human rights, minimize harm, and promote fairness, transparency, and accountability. Offsetting future harms by conscious and ethical deliberation and implementing cautionary approaches such as “do not do significant harm”. In Social <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a> in which Semi-Autonomous Virtual Character (L2) and Autonomous Virtual Character (L3) are implemented, this can mean considering potential or undesirable outcomes arising from its expansion to broader applications.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Cooperation (L2/L3)</h2>
-    <p>Cooperation is a fundamental aspect of human Sociality, understood as reciprocal acts shaped over time for mutual benefit. In Social XR, it includes the key alignment principle of human and autonomous characters’ interactions[Semi-Autonomous Virtual Character (L2) and Autonomous Virtual Character (L3)]. Cooperation can also refer to the collaborative effort among various stakeholders, such as researchers, developers, governments, companies, and the public, to ensure that AI is developed and used in safe, fair, and beneficial ways.
+    <p>Cooperation is a fundamental aspect of human <a href="#" class="popup-link" data-terme="Sociality (L1)">Sociality</a>, understood as reciprocal acts shaped over time for mutual benefit. In Social <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a>, it includes the key alignment principle of human and autonomous characters’ interactions[<a href="#" class="popup-link" data-terme="Semi-Autonomous Virtual Character (L2)">Semi-Autonomous Virtual Characters (L2)</a> and <a href="#" class="popup-link" data-terme="Autonomous Virtual Character (L3)">Autonomous Virtual Character (L3)</a>]. Cooperation can also refer to the collaborative effort among various stakeholders, such as researchers, developers, governments, companies, and the public, to ensure that AI is developed and used in safe, fair, and beneficial ways.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Attachment (L3)</h2>
-    <p>Emotional bond that develops between people, especially in close relationships. It plays a critical role in how we form connections, respond to others, and regulate emotions. In Social XMR, decreasing face-to-face interactions in favour of computer-mediated interactions means social entanglement with Autonomous Virtual Character (L3). This might hold implications for attachment characteristics such as human social skills, emotional regulation, and bonding. Similarly, interactions with Avatar (L1) have implications in Remote Social Connectedness.
+    <p>Emotional bond that develops between people, especially in close relationships. It plays a critical role in how we form connections, respond to others, and regulate emotions. In Social XMR, decreasing face-to-face interactions in favour of computer-mediated interactions means social entanglement with <a href="#" class="popup-link" data-terme="Autonomous Virtual Character (L3)">Autonomous Virtual Character (L3)</a>. This might hold implications for attachment characteristics such as human social skills, emotional regulation, and bonding. Similarly, interactions with <a href="#" class="popup-link" data-terme="Avatar (L1)">Avatar (L1)</a> have implications in <a href="#" class="popup-link" data-terme="Remote Social Connectedness">Remote Social Connectedness</a>.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Trust (L3)</h2>
-    <p>Trust refers to the belief that an AI system will act reliably, ethically, and in the user's best interest. There is an inherent opaqueness of AI systems, leading to potential issues of deception and humans being unable to predict what Autonomous Virtual Character (L3)  will do, and how reliable and secure the given system is. To promote synthetic cooperation between humans and Autonomous Virtual Characters (L3), it is vital to know the identity of agents, their capabilities, and their interaction roles.
+    <p>Trust refers to the belief that an AI system will act reliably, ethically, and in the user's best interest. There is an inherent opaqueness of AI systems, leading to potential issues of deception and humans being unable to predict what <a href="#" class="popup-link" data-terme="Autonomous Virtual Character (L3)">Autonomous Virtual Character (L3)</a>  will do, and how reliable and secure the given system is. To promote synthetic cooperation between humans and Autonomous Virtual Characters (L3), it is vital to know the identity of agents, their capabilities, and their interaction roles.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Ego-Centric Visual-Inertial Tracking</h2>
-    <p>A method for estimating the position and orientation of body segments using a combination of visual and inertial sensors. In egocentric setups, the camera is mounted on a head-mounted display (HMD), while minimal additional sensors are placed on the self-occluded segments (e.g., lower-limbs body). This method is optimal to drive the rendering of Avatars (L1) in XR and allow Sensorimotor Propagation.
+    <p>A method for estimating the position and orientation of body segments using a combination of visual and inertial sensors. In egocentric setups, the camera is mounted on a head-mounted display (HMD), while minimal additional sensors are placed on the self-occluded segments (e.g., lower-limbs body). This method is optimal to drive the rendering of <a href="#" class="popup-link" data-terme="Avatar (L1)">Avatar (L1)</a> in <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a> and allow <a href="#" class="popup-link" data-terme="Sensorimotor Propagation">Sensorimotor Propagation</a>.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>3D Digitization</h2>
-    <p>A process by which a real-world 3D space with the corresponding content (boundaries, objects, and persons) is recorded in XR  by means of direct capture (direct point-cloud registration) or computationally reconstructed from a set of images (for example, using methods of photogrammetry).
+    <p>A process by which a real-world 3D space with the corresponding content (boundaries, objects, and persons) is recorded in <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a> by means of direct capture (direct point-cloud registration) or computationally reconstructed from a set of images (for example, using methods of photogrammetry).
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Scene Neural Rendering</h2>
-    <p>An class of image and video generation techniques that use deep learning to synthesize images from real-world data. It leverages generative machine learning, Neural Radiance Fields (NeRF), or Gaussian Splatting techniques and enables high-fidelity reconstructions (photos and videos) of complex scenes in XR.
+    <p>An class of image and video generation techniques that use deep learning to synthesize images from real-world data. It leverages generative machine learning, Neural Radiance Fields (NeRF), or Gaussian Splatting techniques and enables high-fidelity reconstructions (photos and videos) of complex scenes in <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a>.
     </p>
   </div>
 
@@ -195,109 +200,109 @@
 
   <div class="def" style="display: none">
     <h2>Movement Representation</h2>
-    <p>Unsupervised or semi-supervised machine learning techniques that reduce the dimensionality of high-dimensional kinematic data. These representations facilitate understanding, reconstruction, and generation of movement patterns for [Avatars (L1), Semi-Autonomous Virtual Character (L2) and Autonomous Virtual Character (L3)] in social XR environments.
+    <p>Unsupervised or semi-supervised machine learning techniques that reduce the dimensionality of high-dimensional kinematic data. These representations facilitate understanding, reconstruction, and generation of movement patterns for [<a href="#" class="popup-link" data-terme="Avatar (L1)">Avatars (L1)</a>, <a href="#" class="popup-link" data-terme="Semi-Autonomous Virtual Character (L2)">Semi-Autonomous Virtual Character (L2)</a> and/or <a href="#" class="popup-link" data-terme="Autonomous Virtual Character (L3)">Autonomous Virtual Character (L3)</a>] in social <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a> environments.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Digital Posture Modeling</h2>
-    <p>The process of creating the appearance and whole morphology of a digital representation of a human [Avatars (L1), Semi-Autonomous Virtual Character (L2) and Autonomous Virtual Character (L3)] for use in a XR. Posture refers to the position and alignment of the body parts, such as the spine, shoulders, hips, and limbs, in relation to each other and to gravity. Part of the process includes the creation of a skeletal rig to animate the character.
+    <p>The process of creating the appearance and whole morphology of a digital representation of a human [<a href="#" class="popup-link" data-terme="Avatar (L1)">Avatars (L1)</a>, <a href="#" class="popup-link" data-terme="Semi-Autonomous Virtual Character (L2)">Semi-Autonomous Virtual Character (L2)</a> and/or <a href="#" class="popup-link" data-terme="Autonomous Virtual Character (L3)">Autonomous Virtual Character (L3)</a>] for use in a <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a>. Posture refers to the position and alignment of the body parts, such as the spine, shoulders, hips, and limbs, in relation to each other and to gravity. Part of the process includes the creation of a skeletal rig to animate the character.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Cognitive Architecture</h2>
-    <p>A set of algorithms, datasets, and feedback control strategies that a computer uses to determine the behaviour of a virtual human, say X, in the shared space. It can take as input recorded motion data from one or more humans, and past motion data generated by X and by other virtual humans, such as Avatars (L1), Semi-Autonomous Virtual Character (L2) and Autonomous Virtual Character (L3). It outputs (parts of) the motion data to be followed by X. When deciding this motion data, the cognitive architecture follows an objective that depends on the level of autonomy within the Automatization Continuum.
+    <p>A set of algorithms, datasets, and feedback control strategies that a computer uses to determine the behaviour of a virtual human, say X, in the shared space. It can take as input recorded motion data from one or more humans, and past motion data generated by X and by other virtual humans, such as <a href="#" class="popup-link" data-terme="Avatar (L1)">Avatars (L1)</a>, <a href="#" class="popup-link" data-terme="Semi-Autonomous Virtual Character (L2)">Semi-Autonomous Virtual Character (L2)</a> and/or <a href="#" class="popup-link" data-terme="Autonomous Virtual Character (L3)">Autonomous Virtual Character (L3)</a>. It outputs (parts of) the motion data to be followed by X. When deciding this motion data, the cognitive architecture follows an objective that depends on the level of autonomy within the <a href="#" class="popup-link" data-terme="Autonomization Continuum">Autonomization Continuum</a>.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Pain Unlearning</h2>
-    <p>Pain can be a conditioned response —a learned behavior— rather than solely a physical problem. It often begins as a direct reaction to injury but can become reinforced over time, evolving into a conditioned response (i.e., Chronic Pain). Pain unlearning with XR involves reshaping these learned experiences through innovative interactive scenarios using Avatars (L1), Semi-Autonomous Virtual Character (L2) and Autonomous Virtual Character (L3) driven by Cognitive Architectures, and re-educating the perception of pain to enhance patient well-being.
+    <p>Pain can be a conditioned response —a learned behavior— rather than solely a physical problem. It often begins as a direct reaction to injury but can become reinforced over time, evolving into a conditioned response (i.e., Chronic Pain). Pain unlearning with <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a> involves reshaping these learned experiences through innovative interactive scenarios using <a href="#" class="popup-link" data-terme="Avatar (L1)">Avatars (L1)</a>, <a href="#" class="popup-link" data-terme="Semi-Autonomous Virtual Character (L2)">Semi-Autonomous Virtual Character (L2)</a> and/or <a href="#" class="popup-link" data-terme="Autonomous Virtual Character (L3)">Autonomous Virtual Character (L3)</a> driven by <a href="#" class="popup-link" data-terme="Cognitive Architecture">Cognitive Architectures</a>, and re-educating the perception of pain to enhance patient well-being.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Technostress</h2>
-    <p>Technostress refers to the physical, cognitive, and emotional strain that arises from interacting with digital technologies. In low back pain rehabilitation using XR, it describes the stress patients may experience when adapting to immersive systems — such as increased cognitive load, postural demands, or usability challenges — which can influence engagement, adherence, and therapeutic outcomes. Adopting ethical standards such as Dignity, Cooperation, are crucial to prevent technostress.
+    <p>Technostress refers to the physical, cognitive, and emotional strain that arises from interacting with digital technologies. In low back pain rehabilitation using <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a>, it describes the stress patients may experience when adapting to immersive systems — such as increased cognitive load, postural demands, or usability challenges — which can influence engagement, adherence, and therapeutic outcomes. Adopting ethical standards such as <a href="#" class="popup-link" data-terme="Dignity (L1)">Dignity</a>, <a href="#" class="popup-link" data-terme="Cooperation (L2/L3)">Cooperation</a>, are crucial to prevent technostress.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Virtual Pills</h2>
-    <p>Brief, targeted XR-based interventions designed to address a specific low-back pain problem with the patient. Much like taking medication, these short and focused immersive experiences, exploiting for instance Hybrid Synchronization and Sensorimotor Propagation, aim to deliver precise therapeutic effects—such as reducing pain, anxiety, or maladaptive movement patterns—within a limited timeframe.
+    <p>Brief, targeted <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a>-based interventions designed to address a specific low-back pain problem with the patient. Much like taking medication, these short and focused immersive experiences, exploiting for instance <a href="#" class="popup-link" data-terme="Hybrid Synchronisation">Hybrid Synchronization</a> and <a href="#" class="popup-link" data-terme="Sensorimotor Propagation">Sensorimotor Propagation</a>, aim to deliver precise therapeutic effects—such as reducing pain, anxiety, or maladaptive movement patterns—within a limited timeframe.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Perceived Usability</h2>
-    <p>The extent to which a patient believes that using a technology will be free of effort. In XR rehabilitation, higher perceived usability increases patient engagement, adherence, and confidence in the therapeutic process. Perceived usability can be increased by adopting an ethical approach, reinforcing Self-identity, Trust and Transparency.
+    <p>The extent to which a patient believes that using a technology will be free of effort. In <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a> rehabilitation, higher perceived usability increases patient engagement, adherence, and confidence in the therapeutic process. Perceived usability can be increased by adopting an ethical approach, reinforcing <a href="#" class="popup-link" data-terme="Self-Identity (L2)">Self-identity</a>, <a href="#" class="popup-link" data-terme="Trust (L3)">Trust</a> and <a href="#" class="popup-link" data-terme="Transparency (L2)">Transparency</a>.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Social Pain Exercise</h2>
-    <p>The physical activity performed while interacting with other patients who share similar conditions, exploiting Hybrid Synchronization and the transmission of Social Information. This social dimension reduces the perception of pain, increases Remote Social Connectedness, and fosters broader health benefits, enhancing both physical and emotional well-being.
+    <p>The physical activity performed while interacting with other patients who share similar conditions, exploiting <a href="#" class="popup-link" data-terme="Hybrid Synchronisation">Hybrid Synchronization</a> and the transmission of <a href="#" class="popup-link" data-terme="Social Information">Social Information</a>. This social dimension reduces the perception of pain, increases <a href="#" class="popup-link" data-terme="Remote Social Connectedness">Remote Social Connectedness</a>, and fosters broader health benefits, enhancing both physical and emotional well-being.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Anticipatory Perception</h2>
-    <p>The ability to detect early cues (e.g., posture shifts, micro-accelerations, SensoriMotor Primitives) of Social Information that signal a forthcoming action. In XR cycling, realistic modeling, Amplification/Attenuation of Sensorimotor Primitives is critical for training defenders to anticipate attacks of their opponents in the peloton.
+    <p>The ability to detect early cues (e.g., posture shifts, micro-accelerations, <a href="#" class="popup-link" data-terme="Sensorimotor Primitives">SensoriMotor Primitives</a>) of <a href="#" class="popup-link" data-terme="Social Information">Social Information</a> that signal a forthcoming action. In <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a> cycling, realistic modeling, <a href="#" class="popup-link" data-terme="Amplification/Attenuation of Sensorimotor Primitives">Amplification/Attenuation of sensorimotor primitives</a> is critical for training defenders to anticipate attacks of their opponents in the peloton.
     </p>
   </div>
 
   <div class="def" style="display: none">
-    <h2>Situation Awareness in XR</h2>
-    <p>The capacity to perceive, comprehend, and predict evolving situations in immersive simulations. Challenges include ensuring athletes can generalize what they learn with virtual cues (e.g., the kinematic read-out of Social Information that signal an upcoming attack in a racing scenario) to real-world contexts.
+    <h2>Situation Awareness in <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a></h2>
+    <p>The capacity to perceive, comprehend, and predict evolving situations in immersive simulations. Challenges include ensuring athletes can generalize what they learn with virtual cues (e.g., the kinematic read-out of <a href="#" class="popup-link" data-terme="Social Information">Social Information</a> that signal an upcoming attack in a racing scenario) to real-world contexts.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Fidelity of Micro-Movements in Avatars</h2>
-    <p>The precision with which XR systems capture and render subtle movement cues in Avatars (L1), Semi-Autonomous Virtual Character (L2) and Autonomous Virtual Character (L3), and therefore facilitate Sensorimotor Propagation of Social Information. In the sport domain, micro-movements such as shoulder twitches or changes in pedal rhythm can signal an attack. High-fidelity capture and rendering through accurate Movement Representation is therefore essential for athletes to learn to detect and act on these early signs.
+    <p>The precision with which <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a> systems capture and render subtle movement cues in <a href="#" class="popup-link" data-terme="Avatar (L1)">Avatars (L1)</a>, <a href="#" class="popup-link" data-terme="Semi-Autonomous Virtual Character (L2)">Semi-Autonomous Virtual Character (L2)</a> and/or <a href="#" class="popup-link" data-terme="Autonomous Virtual Character (L3)">Autonomous Virtual Character (L3)</a>, and therefore facilitate <a href="#" class="popup-link" data-terme="Sensorimotor Propagation">Sensorimotor Propagation</a> of <a href="#" class="popup-link" data-terme="Social Information">Social Information</a>. In the sport domain, micro-movements such as shoulder twitches or changes in pedal rhythm can signal an attack. High-fidelity capture and rendering through accurate <a href="#" class="popup-link" data-terme="Movement Representation">Movement Representation</a> is therefore essential for athletes to learn to detect and act on these early signs.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Action-Perception Coupling</h2>
-    <p>The tight linkage between what an agent perceives (e.g., visual flow, body language of others) and how they act (e.g., adaptation, reaction, changing the visual perspective itself..). In racing sports, perception can be the Social Information embedded in others’ kinematics, and coupled actions can be shifting cadence, or blocking positions for instance. In XR, maintaining the natural timing of this coupling is key to effective Sensorimotor Propagation and transfer of training.
+    <p>The tight linkage between what an agent perceives (e.g., visual flow, body language of others) and how they act (e.g., adaptation, reaction, changing the visual perspective itself..). In racing sports, perception can be the <a href="#" class="popup-link" data-terme="Social Information">Social Information</a> embedded in others’ kinematics, and coupled actions can be shifting cadence, or blocking positions for instance. In <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a>, maintaining the natural timing of this coupling is key to effective <a href="#" class="popup-link" data-terme="Sensorimotor Propagation">Sensorimotor Propagation</a> and transfer of training.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Stress and Decision Load</h2>
-    <p>The heightened cognitive and physiological demands of monitoring and reading out the Social Information of multiple partners (e.g., rival and team mate riders), anticipating their action (e.g., attacks), and responding under time pressure. XR scenarios must balance realism with manageable cognitive load to avoid overwhelming athletes during training.
+    <p>The heightened cognitive and physiological demands of monitoring and reading out the <a href="#" class="popup-link" data-terme="Social Information">Social Information</a> of multiple partners (e.g., rival and team mate riders), anticipating their action (e.g., attacks), and responding under time pressure. <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a> scenarios must balance realism with manageable cognitive load to avoid overwhelming athletes during training.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Hybrid Co-location</h2>
-    <p>Commonly, co-location means that multiple people are in the same physical space. In the context of ShareSpace, Hybrid Co-location applies to participants who are present in the same physical and virtual space (e.g., in a VR cave such as the  Ars Electronica’s Deep Space 8K that was used in Sharespace artistic applications), or in the same virtual space as remote users with whom they do not share the physical space. A challenge in designing shared hybrid spaces is to implement Hybrid Co-location in a way that enables feelings of social presence and remote social connectedness. 
+    <p>Commonly, co-location means that multiple people are in the same physical space. In the context of ShareSpace, Hybrid Co-location applies to participants who are present in the same physical and virtual space (e.g., in a VR cave such as the  Ars Electronica’s Deep Space 8K that was used in Sharespace artistic applications), or in the same virtual space as remote users with whom they do not share the physical space. A challenge in designing shared hybrid spaces is to implement Hybrid Co-location in a way that enables feelings of <a href="#" class="popup-link" data-terme="Social Presence">social presence</a> and <a href="#" class="popup-link" data-terme="Remote Social Connectedness">remote social connectedness</a>.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Collaborative Aesthetics (CA)</h2>
-    <p>Building upon the term Cooperative Aesthetics, defined by media art expert Gerhard Funk, collaborative aesthetics describes an interactive yet creative process of unique shared experiences in XR.  The Action–Perception Coupling between members of a group allows the product of their interaction to bring forth a new system of interconnected participants which generates a unique outcome (e.g., an audio-visual art piece, a collective narrative and many more). Within a shared hybrid space, CA empowers each and every users to actively contribute their ideas and perspectives to a collective experience of creation.
+    <p>Building upon the term Cooperative Aesthetics, defined by media art expert Gerhard Funk, collaborative aesthetics describes an interactive yet creative process of unique shared experiences in <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a>.  The <a href="#" class="popup-link" data-terme="Action-Perception Coupling">Action–Perception Coupling</a> between members of a group allows the product of their interaction to bring forth a new system of interconnected participants which generates a unique outcome (e.g., an audio-visual art piece, a collective narrative and many more). Within a shared hybrid space, CA empowers each and every users to actively contribute their ideas and perspectives to a collective experience of creation.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Authenticity of XR Experience</h2>
-    <p>The challenge of preserving the emotional depth, immediacy, and aura of live performance when mediated by digital tools. It addresses concerns about whether digital art can evoke the same intensity and Social Presence as in-person encounters. One way to take up this challenge and that Sharespace employs is to design and use human-inspired Cognitive Architectures to drive the behaviours of Semi-Autonomous Virtual Character (L2) and Autonomous Virtual Character (L3) and, in particular, to model their ways of interacting with Avatars driven by humans (L1).
+    <p>The challenge of preserving the emotional depth, immediacy, and aura of live performance when mediated by digital tools. It addresses concerns about whether digital art can evoke the same intensity and <a href="#" class="popup-link" data-terme="Social Presence">Social Presence</a> as in-person encounters. One way to take up this challenge and that Sharespace employs is to design and use human-inspired <a href="#" class="popup-link" data-terme="Cognitive Architecture">Cognitive Architectures</a> to drive the behaviours of <a href="#" class="popup-link" data-terme="Semi-Autonomous Virtual Character (L2)">Semi-Autonomous Virtual Character (L2)</a> and/or <a href="#" class="popup-link" data-terme="Autonomous Virtual Character (L3)">Autonomous Virtual Character (L3)</a> and, in particular, to model their ways of interacting with <a href="#" class="popup-link" data-terme="Avatar (L1)">Avatars</a> driven by humans (L1).
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Immersive Audience Engagement</h2>
-    <p>The active involvement of spectators in XR performances through sensory immersion, detection and transmission of Social Information,and participation through Hybrid Synchronization. It shifts the audience from passive viewers to co-experiencers, deepening emotional resonance but also raising challenges of agency, accessibility, and design.
+    <p>The active involvement of spectators in <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a> performances through sensory immersion, detection and transmission of <a href="#" class="popup-link" data-terme="Social Information">Social Information</a>,and participation through <a href="#" class="popup-link" data-terme="Hybrid Synchronisation">Hybrid Synchronization</a>. It shifts the audience from passive viewers to co-experiencers, deepening emotional resonance but also raising challenges of agency, accessibility, and design.
     </p>
   </div>
 
   <div class="def" style="display: none">
     <h2>Hybrid Liveness</h2>
-    <p>The blending of physical and virtual presence in XR performance, where digital and Embodied elements coexist. It highlights both the creative potential and technical barriers of maintaining real-time Hybrid Synchronization across physical and virtual stages.
+    <p>The blending of physical and virtual presence in <a href="#" class="popup-link" data-terme="Extended Reality (XR)">XR</a> performance, where digital and <a href="#" class="popup-link" data-terme="Embodiment/Embodied">Embodied</a> elements coexist. It highlights both the creative potential and technical barriers of maintaining real-time <a href="#" class="popup-link" data-terme="Hybrid Synchronisation">Hybrid Synchronization</a> across physical and virtual stages.
     </p>
   </div>
 
