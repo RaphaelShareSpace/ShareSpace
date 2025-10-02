@@ -47,6 +47,12 @@
   font-weight: bold;
   text-decoration: underline;
 }
+
+.related-term-highlight {
+  background-color: #ffe4ef !important;
+  color: #e75480 !important;
+}
+
 </style>
 </head>
 <body>
@@ -409,6 +415,7 @@
     backBtn.style.display = historyIndex > 0 ? 'inline' : 'none';
     forwardBtn.style.display = historyIndex < history.length - 1 ? 'inline' : 'none';
 
+    
     popupContent.querySelectorAll('.popup-link').forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -474,6 +481,38 @@
   popup.addEventListener('click', e => {
     if(e.target === popup) fermerPopup();
   }); 
+
+  // Ajout du survol pour mettre en surbrillance les boutons liés
+  document.querySelectorAll('.elementor-button-text').forEach(terme => {
+    terme.addEventListener('mouseenter', function() {
+      const termeTexte = this.textContent.trim();
+      // Cherche la définition correspondante
+      let defDiv = null;
+      defs.forEach(def => {
+        const titre = def.querySelector('h2');
+        if (titre && titre.textContent.trim() === termeTexte) {
+          defDiv = def;
+        }
+      });
+      if (defDiv) {
+        // Récupère tous les termes liés dans la définition
+        const links = defDiv.querySelectorAll('.popup-link[data-terme]');
+        const relatedTermes = Array.from(links).map(link => link.getAttribute('data-terme').trim());
+        // Met en surbrillance les boutons correspondants
+        document.querySelectorAll('.elementor-button-text').forEach(btn => {
+          if (relatedTermes.includes(btn.textContent.trim())) {
+            btn.classList.add('related-term-highlight');
+          }
+        });
+      }
+    });
+    terme.addEventListener('mouseleave', function() {
+      // Retire la surbrillance
+      document.querySelectorAll('.elementor-button-text').forEach(btn => {
+        btn.classList.remove('related-term-highlight');
+      });
+    });
+  });
 </script>
 
 </body>
