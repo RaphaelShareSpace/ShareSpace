@@ -18,7 +18,7 @@
 }
 
 .popup-contenu {
-  background-color: #fff;
+  background: #ffe4ef 60%;
   padding: 30px;
   border-radius: 8px;
   position: relative;
@@ -53,6 +53,23 @@
   color: #e75480 !important;
 }
 
+#popup-back, #popup-forward {
+  background: linear-gradient(135deg, #e75480 60%, #b39ddb 100%);
+  border: 2px solid #e75480;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(227,84,128,0.15);
+  color: black;
+  transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
+  padding: 4px 10px;
+  outline: none;
+}
+#popup-back:hover, #popup-forward:hover {
+  background: linear-gradient(135deg, #b39ddb 60%, #e75480 100%);
+  border-color: #b39ddb;
+  color: black;
+  box-shadow: 0 4px 16px rgba(179,157,219,0.25);
+  cursor: pointer;
+}
 </style>
 </head>
 <body>
@@ -107,7 +124,7 @@
 
   <div id="maPopup" class="popup" style="display: none;">
     <div class="popup-contenu">
-      <button id="popup-back" style="position:absolute;top:10px;left:15px;font-size:24px;display:none;background:none;border:none;cursor:pointer;">&#8592;</button>
+      <button id="popup-back" style="position:absolute;top:10px;left:15px;font-size:24px;display:none;cursor:pointer;">&#8592;</button>
       <button id="popup-forward" style="position:absolute;top:10px;left:45px;font-size:24px;display:none;background:none;border:none;cursor:pointer;">&#8594;</button>
       <span class="fermer" onclick="fermerPopup()">&times;</span>
       <div id="defContent"></div>
@@ -384,109 +401,113 @@
   const defs = document.querySelectorAll('.def');
   const backBtn = document.getElementById('popup-back');
   const forwardBtn = document.getElementById('popup-forward');
+
+  let scrollPosition = 0;
   let history = [];
   let historyIndex = -1;
 
-  document.querySelectorAll('.elementor-button-text').forEach(terme => {
-    terme.addEventListener('click', function(){
-      const termeTexte = this.textContent.trim();
-      history = [termeTexte];
-      historyIndex = 0;
-      afficherDefinition(termeTexte);
-    });
-  });
-
-  function afficherDefinition(termeTexte) {
-    // Si on clique sur un lien, on coupe l'historique après l'index courant
-    if (historyIndex === -1 || history[historyIndex] !== termeTexte) {
-      history = history.slice(0, historyIndex + 1);
-      history.push(termeTexte);
-      historyIndex = history.length - 1;
-    }
-    let contenu = '';
-    defs.forEach(def => {
+  function getDefinitionContent(termeTexte) {
+    for (const def of defs) {
       const titre = def.querySelector('h2');
       if (titre && titre.textContent.trim() === termeTexte) {
-        contenu = def.innerHTML;
+        return def.innerHTML;
       }
-    });
+    }
+    return '';
+  }
+
+  // Met à jour le popup selon l'état actuel d'historique
+  function updatePopup() {
+    if (historyIndex < 0 || historyIndex >= history.length) return;
+
+    const termeTexte = history[historyIndex];
+    const contenu = getDefinitionContent(termeTexte);
     popupContent.innerHTML = contenu;
-    popup.style.display = 'flex';
+
     backBtn.style.display = historyIndex > 0 ? 'inline' : 'none';
     forwardBtn.style.display = historyIndex < history.length - 1 ? 'inline' : 'none';
 
-    
+    // Ajout event listeners sur popup-links (délégués si possible)
     popupContent.querySelectorAll('.popup-link').forEach(link => {
-      link.addEventListener('click', function(e) {
+      link.onclick = e => {
         e.preventDefault();
-        const terme = this.getAttribute('data-terme');
-        afficherDefinition(terme);
-      });
+        const terme = link.getAttribute('data-terme');
+        if (!terme) return;
+
+        // Si nouveau terme différent du terme courant, ajout à l'historique
+        if (history[historyIndex] !== terme) {
+          history = history.slice(0, historyIndex + 1);
+          history.push(terme);
+          historyIndex++;
+        }
+        updatePopup();
+      };
     });
   }
 
-  backBtn.addEventListener('click', function() {
+  // Ouverture popup et ajout à l'historique (lancé au clic sur un terme)
+  function openPopupWithTerm(termeTexte) {
+    // Reset scroll lock
+    scrollPosition = window.scrollY || window.pageYOffset;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
+
+    // Reset historique
+    history = [termeTexte];
+    historyIndex = 0;
+
+    updatePopup();
+    popup.style.display = 'flex';
+  }
+
+  // Gestion des boutons back/forward
+  backBtn.addEventListener('click', () => {
     if (historyIndex > 0) {
       historyIndex--;
-      const prev = history[historyIndex];
-      let contenu = '';
-      defs.forEach(def => {
-        const titre = def.querySelector('h2');
-        if (titre && titre.textContent.trim() === prev) {
-          contenu = def.innerHTML;
-        }
-      });
-      popupContent.innerHTML = contenu;
-      backBtn.style.display = historyIndex > 0 ? 'inline' : 'none';
-      forwardBtn.style.display = historyIndex < history.length - 1 ? 'inline' : 'none';
-      popupContent.querySelectorAll('.popup-link').forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          const terme = this.getAttribute('data-terme');
-          afficherDefinition(terme);
-        });
-      });
+      updatePopup();
     }
   });
-
-  forwardBtn.addEventListener('click', function() {
+  forwardBtn.addEventListener('click', () => {
     if (historyIndex < history.length - 1) {
       historyIndex++;
-      const next = history[historyIndex];
-      let contenu = '';
-      defs.forEach(def => {
-        const titre = def.querySelector('h2');
-        if (titre && titre.textContent.trim() === next) {
-          contenu = def.innerHTML;
-        }
-      });
-      popupContent.innerHTML = contenu;
-      backBtn.style.display = historyIndex > 0 ? 'inline' : 'none';
-      forwardBtn.style.display = historyIndex < history.length - 1 ? 'inline' : 'none';
-      popupContent.querySelectorAll('.popup-link').forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          const terme = this.getAttribute('data-terme');
-          afficherDefinition(terme);
-        });
-      });
+      updatePopup();
     }
   });
 
+  // Fermeture popup
   function fermerPopup() {
     popup.style.display = 'none';
+
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
+
+    window.scrollTo(0, scrollPosition);
+
     history = [];
     historyIndex = -1;
   }
-  popup.addEventListener('click', e => {
-    if(e.target === popup) fermerPopup();
-  }); 
 
-  // Ajout du survol pour mettre en surbrillance les boutons liés
+  popup.addEventListener('click', e => {
+    if (e.target === popup) fermerPopup();
+  });
+
+  // Ajout des events au clic sur termes
+  document.querySelectorAll('.elementor-button-text').forEach(terme => {
+    terme.addEventListener('click', function() {
+      const termeTexte = this.textContent.trim();
+      openPopupWithTerm(termeTexte);
+    });
+  });
+
   document.querySelectorAll('.elementor-button-text').forEach(terme => {
     terme.addEventListener('mouseenter', function() {
       const termeTexte = this.textContent.trim();
-      // Cherche la définition correspondante
       let defDiv = null;
       defs.forEach(def => {
         const titre = def.querySelector('h2');
@@ -495,19 +516,17 @@
         }
       });
       if (defDiv) {
-        // Récupère tous les termes liés dans la définition
         const links = defDiv.querySelectorAll('.popup-link[data-terme]');
         const relatedTermes = Array.from(links).map(link => link.getAttribute('data-terme').trim());
-        // Met en surbrillance les boutons correspondants
         document.querySelectorAll('.elementor-button-text').forEach(btn => {
           if (relatedTermes.includes(btn.textContent.trim())) {
             btn.classList.add('related-term-highlight');
           }
         });
       }
+      terme.classList.add('related-term-highlight');
     });
     terme.addEventListener('mouseleave', function() {
-      // Retire la surbrillance
       document.querySelectorAll('.elementor-button-text').forEach(btn => {
         btn.classList.remove('related-term-highlight');
       });
